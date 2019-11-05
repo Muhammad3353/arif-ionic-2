@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>All Products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor = "let product of products">
+    <ion-item (click) = "changeurl(product)">
+      <ion-card-content>
+        <ion-label>
+          {{product?.name}} | {{product?.id}}
+        </ion-label>
+      </ion-card-content> 
+
+    </ion-item>
+  </ion-card>
+
+</ion-content>

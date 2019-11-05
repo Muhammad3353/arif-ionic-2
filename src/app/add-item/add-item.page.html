@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add New Item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-padding-top">
+    <ion-text>
+      Add New Product
+    </ion-text>
+    <div [formGroup]="addForm">
+      <ion-item>
+        <ion-label positoin="floating">Product Name</ion-label>
+        <ion-input formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label positon="floating">Product ID</ion-label>
+        <ion-input formControlName="id"></ion-input>
+
+        <ion-grid class="ion-padding-top">
+          <ion-row class="ion-justify-content-cneter">
+            <ion-button shape="round" [disabled]="!addForm.valid" (click)="addNewProduct()">
+              Save
+            </ion-button>
+          </ion-row>
+        </ion-grid>
+
+      </ion-item>
+
+    </div>
+  </ion-grid>
+</ion-content>

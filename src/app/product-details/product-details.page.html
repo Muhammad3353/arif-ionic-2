@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button>
+      <ion-back-button defaultHref="products"></ion-back-button>
+    </ion-button>
+    <ion-title>Product Details</ion-title>
+    <ion-button slot="end" (click)="deleteProduct()">
+      <ion-icon name="close">
+      </ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <p>Image is </p>
+    <ion-card-header>
+      <ion-card-title>
+        {{singleProduct?.name}}
+      </ion-card-title>
+      <ion-card-content>
+        {{singleProduct?.id}}
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>
